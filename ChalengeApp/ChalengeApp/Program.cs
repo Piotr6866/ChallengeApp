@@ -1,24 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, Piotr! Co słychać");
-var name = "Ewa";
-//var sex = "Kobieta";
-bool czyKobieta = true;
-var age = 33;
-if (czyKobieta == true && age < 30)
+﻿long number = 1111110234566;  // typ long ze względu na moźliwość użycia dłuższych liczb
+//long number2 = long.MaxValue;
+string numberAsString = number.ToString();
+char[] Digits = numberAsString.ToArray();
+int[] counter = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+foreach (char digit in Digits)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
+    counter[Convert.ToInt32(new string(digit, 1))]++;
 }
-else if (name == "Ewa" && age == 33)
+
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine("Ewa, lat 33");
-}
-else if (czyKobieta == false && age < 18)
-{
-    Console.WriteLine("Niepełnoletni Mężczyzna");
-}
-else
-{
-    Console.WriteLine("Nieznany warunek");
+    Console.WriteLine(i + " => " + counter[i]);
 }
 
 
