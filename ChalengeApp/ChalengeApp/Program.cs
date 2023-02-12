@@ -1,43 +1,43 @@
 ﻿using ChalengeApp;
 
-Employee Employee1 = new Employee("Adam", "Nowak", 35);
-Employee1.AddScore(3);
-Employee1.AddScore(5);
-Employee1.AddScore(7);
-Employee1.AddScore(9);
-Employee1.AddScore(10);
+Employee employee1 = new Employee("Adam", "Nowak", 35);
+employee1.AddScore(3);
+employee1.AddScore(5);
+employee1.AddScore(7);
+employee1.AddScore(9);
+employee1.AddScore(10);
 
-Employee Employee2 = new Employee("Wojciech", "Fibak", 58);
-Employee2.AddScore(2);
-Employee2.AddScore(7);
-Employee2.AddScore(7);
-Employee2.AddScore(8);
-Employee2.AddScore(8);
+Employee employee2 = new Employee("Wojciech", "Fibak", 58);
+employee2.AddScore(2);
+employee2.AddScore(7);
+employee2.AddScore(7);
+employee2.AddScore(8);
+employee2.AddScore(8);
 
-Employee Employee3 = new Employee("Luke", "Skywalker", 20);
-Employee3.AddScore(4);
-Employee3.AddScore(5);
-Employee3.AddScore(7);
-Employee3.AddScore(10);
-Employee3.AddScore(10);
+Employee employee3 = new Employee("Luke", "Skywalker", 20);
+employee3.AddScore(4);
+employee3.AddScore(5);
+employee3.AddScore(7);
+employee3.AddScore(10);
+employee3.AddScore(10);
 
 List<Employee> Employees = new List<Employee>()
 {
-    Employee1,Employee2,Employee3
+    employee1,employee2,employee3
 };
 
 int maxResult = -1;
-Employee EmployeeWithMaxResult = null;
+Employee employeeWithMaxResult = null;
 
-foreach (var Employee in Employees)
+foreach (var employee in Employees)
 {
-    if (Employee.Result > maxResult)
+    if (employee.Result > maxResult)
     {
-        EmployeeWithMaxResult = Employee;
-        maxResult = Employee.Result;
+        employeeWithMaxResult = employee;
+        maxResult = employee.Result;
     }
 }
 
-Console.WriteLine("Pracownik z najwyższym wynikiem: " + EmployeeWithMaxResult.Name + 
-    " " + EmployeeWithMaxResult.LastName + ", lat: " + EmployeeWithMaxResult.Age);
-Console.WriteLine("Wynik: " + EmployeeWithMaxResult.Result);
+Console.WriteLine("Pracownik z najwyższym wynikiem: " + employeeWithMaxResult.Name + 
+    " " + employeeWithMaxResult.LastName + ", lat: " + employeeWithMaxResult.Age);
+Console.WriteLine("Wynik: " + employeeWithMaxResult.Result);
