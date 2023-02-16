@@ -1,4 +1,4 @@
-﻿namespace ChalengeApp
+﻿namespace ChallengeApp
 {
     public class Employee
     {
@@ -6,6 +6,7 @@
         public string LastName { get; set; }
         public int Age { get; set; }
         private List<int> Score = new List<int>();
+
         public Employee(string Name, string lastName, int age)
         {
             this.Name = Name;

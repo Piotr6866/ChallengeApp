@@ -1,3 +1,4 @@
+using ChallengeApp;
 namespace ChalengeApp.Tests
 
 {

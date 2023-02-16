@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChalengeApp\ChalengeApp.csproj" />
+    <ProjectReference Include="..\ChalengeApp\ChallengeApp.csproj" />
   </ItemGroup>
 
 </Project>

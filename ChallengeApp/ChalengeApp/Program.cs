@@ -1,4 +1,4 @@
-﻿using ChalengeApp;
+﻿using ChallengeApp;
 
 Employee employee1 = new Employee("Adam", "Nowak", 35);
 employee1.AddScore(3);
