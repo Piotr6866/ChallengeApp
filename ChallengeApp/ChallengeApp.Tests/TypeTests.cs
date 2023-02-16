@@ -7,7 +7,7 @@ namespace ChallangeApp.Tests
         public void TwoGetEmployeeShouldBeDifferentObjects()
         {
             // arrange
-            var employee1 = GetEmployee("John","Brown",33);
+            var employee1 = GetEmployee("John", "Brown", 33);
             var employee2 = GetEmployee("John", "Brown", 33);
 
             //act

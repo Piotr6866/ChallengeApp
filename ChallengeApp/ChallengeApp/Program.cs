@@ -38,6 +38,6 @@ foreach (var employee in Employees)
     }
 }
 
-Console.WriteLine("Pracownik z najwyższym wynikiem: " + employeeWithMaxResult.Name + 
+Console.WriteLine("Pracownik z najwyższym wynikiem: " + employeeWithMaxResult.Name +
     " " + employeeWithMaxResult.LastName + ", lat: " + employeeWithMaxResult.Age);
 Console.WriteLine("Wynik: " + employeeWithMaxResult.Result);

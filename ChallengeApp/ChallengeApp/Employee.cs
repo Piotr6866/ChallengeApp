@@ -19,10 +19,11 @@
         }
         public int Result
         {
-            get 
-            { 
-                return this.Score.Sum(); 
+            get
+            {
+                return this.Score.Sum();
             }
         }
     }
 }
+
