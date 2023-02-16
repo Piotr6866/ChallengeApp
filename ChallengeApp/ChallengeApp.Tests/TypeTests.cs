@@ -1,4 +1,4 @@
-﻿using ChallengeApp;
+﻿using ChallengeApp; 
 namespace ChallangeApp.Tests
 {
     public class TypeTests
