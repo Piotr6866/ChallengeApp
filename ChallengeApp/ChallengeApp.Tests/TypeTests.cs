@@ -8,8 +8,8 @@ namespace ChallangeApp.Tests
         public void TwoGetEmployeeShouldBeDifferentObjects()
         {
             // arrange
-            var employee1 = GetEmployee("John", "Brown", 33);
-            var employee2 = GetEmployee("John", "Brown", 33);
+            var employee1 = GetEmployee("John", "Brown");
+            var employee2 = GetEmployee("John", "Brown");
 
             //act
 
@@ -56,9 +56,9 @@ namespace ChallangeApp.Tests
             Assert.AreEqual(number1, number2);
         }
 
-        private Employee GetEmployee(string name, string surname, int age)
+        private Employee GetEmployee(string name, string surname)
         {
-            return new Employee(name, surname, age);
+            return new Employee(name, surname);
         }
     }
 }
