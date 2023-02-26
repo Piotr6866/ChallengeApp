@@ -5,19 +5,6 @@ namespace ChalengeApp.Tests
     public class Tests
     {
         [Test]
-        public void CheckResultWithNegativeNumbers()
-        {
-            // arrange 
-            var employee1 = new Employee("Johnny", "Walker");
-            employee1.AddGrade(-3);
-            employee1.AddGrade(-5);
-            // act    
-            var result = employee1.Result;
-            // assert  
-            Assert.AreEqual(-8, result);
-        }
-
-        [Test]
         public void CheckMaxResult()
         {
             // arrange 
@@ -64,5 +51,22 @@ namespace ChalengeApp.Tests
             // assert  
             Assert.AreEqual(7, statistics1.Average);
         }
+        [Test]
+        public void WhenUserGetPoints_ShouldCorrectStatistics()
+        {
+            // arrange 
+            var employeeAE = new Employee("Alano", "Espaniol");
+            employeeAE.AddGrade('A');
+            employeeAE.AddGrade('C');
+            // act 
+            var statistics = employeeAE.GetStatistics();
+            // assert 
+            Assert.AreEqual(100, statistics.Max);
+            Assert.AreEqual(60, statistics.Min);
+            Assert.AreEqual(80, statistics.Average);
+            Assert.AreEqual('B', statistics.AverageLetter);
+
+        }
+
     }
 }
