@@ -18,11 +18,28 @@ while (true)
         }
         ///char valueInChar = input[0];
         /// string jest tablicą elementów char
-        employee.AddGrade(input[0]);
+        
+        ///employee.AddGrade(input[0]);
+        try
+        {
+            employee.AddGrade(input[0]);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Exception catched: {e.Message}");
+        }
     }
     else
     {
-        employee.AddGrade(input);
+        ///employee.AddGrade(input);
+        try
+        {
+            employee.AddGrade(input);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Exception catched: {e.Message}");
+        }
     }
 
 }

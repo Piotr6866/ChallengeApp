@@ -21,7 +21,8 @@ public class Employee
         }
         else
         {
-            Console.WriteLine(number + " - Invalid grade value");
+            //Console.WriteLine(number + " - Invalid grade value");
+            throw new Exception("Invalid grade value");
         }
     }
 
@@ -64,8 +65,9 @@ public class Employee
                 this.Grades.Add(20);
                 break;
             default:
-                this.Grades.Add(0);
-                break;
+                throw new Exception("Wrong letter");
+                //this.Grades.Add(0);
+                //break;
         }
     }
 
