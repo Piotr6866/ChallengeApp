@@ -2,15 +2,19 @@
 
 namespace ChallengeApp;
 
-public class Employee : Person
+public class Employee : IEmployee
 {
- //   public string Surname { get; private set; }
     private List<float> Grades = new List<float>();
 
     public Employee(string name, string surname) 
-        : base (name,surname)
+    //    : base (name,surname)
     {
+        this.Name = name;
+        this.Surname = surname;
     }
+    public string Name { get; private set; }
+    public string Surname { get; private set; }
+
     public void AddGrade(float number)
     {
         if (number >= 0 && number <= 100)
@@ -121,6 +125,11 @@ public class Employee : Person
                 break;
         }
         return statistics;
+    }
+
+    void IEmployee.AddGrade(int grade)
+    {
+        throw new NotImplementedException();
     }
 }
 
