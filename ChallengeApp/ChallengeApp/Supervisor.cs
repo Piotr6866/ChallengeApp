@@ -2,29 +2,29 @@
 {
     public class Supervisor : IEmployee
     {
-        public string Name =>"Adam";
+        public string Name => "Adam";
 
         public string Surname => throw new NotImplementedException();
         private List<float> Grades = new List<float>();
 
-        public Statistics GetStatistics()
-        {
-            throw new NotImplementedException();
-        }
+        //public Statistics GetStatistics()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void AddGrade(float grade)
         {
-            throw new NotImplementedException();
+            throw new Exception("Value not allowed for Supervisor");
         }
 
         public void AddGrade(double grade)
         {
-            throw new NotImplementedException();
+            throw new Exception("Value not allowed for Supervisor");
         }
 
         public void AddGrade(char grade)
         {
-            throw new NotImplementedException();
+            throw new Exception("Value not allowed for Supervisor");
         }
 
         public void AddGrade(string grade)
@@ -82,13 +82,55 @@
                 default:
                     throw new Exception("Invalid grade Value");
             }
-            throw new NotImplementedException();
         }
 
         public void AddGrade(int grade)
         {
-
-            throw new NotImplementedException();
+            throw new Exception("Value not allowed for Supervisor");
         }
+
+        public Statistics GetStatistics()
+        {
+            var statistics = new Statistics();
+            statistics.Average = 0;
+            statistics.Max = float.MinValue;
+            statistics.Min = float.MaxValue;
+            var index = 0;
+
+            foreach (var grade in this.Grades)
+            {
+                statistics.Average += grade;
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+            }
+
+            statistics.Average /= this.Grades.Count;
+
+            switch (statistics.Average)
+            {
+               
+                case var average when average >= 90:
+                    statistics.AverageLetter = '6';
+                    break;
+                case var average when average >= 70:
+                    statistics.AverageLetter = '5';
+                    break;
+                case var average when average >= 50:
+                    statistics.AverageLetter = '4';
+                    break;
+                case var average when average >= 30:
+                    statistics.AverageLetter = '3';
+                    break;
+                case var average when average >= 10:
+                    statistics.AverageLetter = '2';
+                    break;
+                default:
+                    statistics.AverageLetter = '1';
+                    break;
+            }
+            return statistics;
+        }
+
+
     }
 }
